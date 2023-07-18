@@ -11,12 +11,18 @@ button.addEventListener("click", function () {
 });
 
 // Задайте правильні ts типи для класичних js;
-let age: number = 50;
-let firstName: string = "Max";
-let toggle: boolean = true;
-let empty: any = null;
-let notInitialize: unknown = undefined;
-let callback = (a: number): number => {
+let age: number;
+age = 50;
+let firstName: string;
+firstName = "Max";
+let toggle: boolean;
+toggle = true;
+let empty: null;
+empty = null;
+let notInitialize: undefined;
+notInitialize = undefined;
+let callback = (a: number) => number;
+callback = (a) => {
   return 100 + a;
 };
 
