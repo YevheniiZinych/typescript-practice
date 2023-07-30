@@ -1,4 +1,4 @@
-const button = document.querySelector("button");
+const button = document.getElementById("btn")! as HTMLBodyElement;
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 const input2 = document.getElementById("num2")! as HTMLInputElement;
 
@@ -21,9 +21,11 @@ let empty: null;
 empty = null;
 let notInitialize: undefined;
 notInitialize = undefined;
-let callback = (a: number) => number;
-callback = (a) => {
-  return 100 + a;
+
+let callback: (num: number) => void;
+
+callback = (num) => {
+  console.log(num);
 };
 
 // Задайте тип для змінної, в яку можна зберегти будь-яке значення.
@@ -31,15 +33,15 @@ let anything: any = -20;
 anything = "Text";
 anything = {};
 
-// Виправте код зі змінною unknown, щоб у нього можна було зберегти змінну з текстом.
+// Виправте код зі змінною unknown, щоб у нього можна було зберегти змінну з цифрою.
 
 let some: unknown;
-some = "Text";
+some = 10;
 
-let str: string;
+let num: number;
 
-if (typeof some === "string") {
-  str = some;
+if (typeof some === "number") {
+  num = some;
 }
 
 // Зробіть незмінний масив із суворо описаними типами. Масив для прикладу.
